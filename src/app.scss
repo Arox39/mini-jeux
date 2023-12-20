@@ -1,0 +1,187 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    background-color: #faf9f2;
+    background-color: #F3F9D2;
+    font-family: 'Inter', sans-serif;
+}
+
+.mini-game
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    width: 45vw;
+    height: 100vh;
+    .start
+    {
+        cursor: pointer;
+        
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        z-index: 1;
+
+        border-radius: 1.3vw;
+        border: 1px solid black;
+        height: 3vw;
+
+        font-size: 1.3vw;
+        background-color: #F3F9D2;
+        transition: all ease 0.5s;
+        &:hover 
+        {
+            background: rgb(73,198,229);
+        }
+    }
+    .game-over 
+    {
+        position: absolute;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        z-index: 100;
+
+        width: 30vw;
+        height: 20vw;
+
+        border-radius: 2vw;
+        background-color: #F3F9D2;
+        transition: opacity ease 1s;
+        .title
+        {
+            font-size: 2vw;
+        }
+        .score 
+        {
+            margin: 0vw;
+        }
+        .difficulter
+        {
+            margin-top:1.5vw;
+        }
+        .close
+        {
+            cursor: pointer;
+            margin-top: 2vw;
+            
+            height:3vw;
+            width: 50%;
+
+            border-radius: 0.5vw;
+            border: 1px solid black;
+            color: #ffffff;
+            font-weight: 400;
+            background-color: #242038;
+            transition: all ease 0.5s;
+            &:hover 
+            {
+                background-color: transparent;
+                color: black;
+            }
+        }
+    }
+    .hide 
+    {
+        opacity: 0;
+        display: none;
+    }
+    .result 
+    {
+        position: absolute;
+        right: 6.75vw;
+    }
+    .data 
+    {
+        position: absolute;    
+        top: 8.25vw;
+        left: 2.5vw;
+        #score, .vie, .difficulter
+        {
+            display: flex;
+            align-items: center;
+
+            height: 3vw;
+            font-size: 1.3vw;
+        }
+        .difficulter 
+        {
+            margin-top: 0.75vw;
+            flex-direction: column;
+            align-items: baseline;
+            select 
+            {
+                margin-top: 0.5vw;
+                width: 10vw;
+                font-size: 1vw;
+                color: #242038;
+                background-color: transparent;
+            }
+        }
+
+    }
+    .container 
+    {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-top: 3vw;
+        height: 35vw;
+        width: 35vw;
+        background-color: #53687E;
+        border-radius: 1vw;
+        
+        .carre 
+        {
+            flex: 1;
+            min-width: 33%;
+            border: 1px solid #242038;
+            background-color: #49C6E5;
+
+            &:nth-child(1)
+            {
+                border-radius: 1vw 0 0 0;
+                border-top:none ;
+                border-left:none ;
+            }
+            &:nth-child(2) {border-top:none ;}
+            &:nth-child(3)
+            {
+                border-radius: 0 1vw  0 0;
+                border-top:none ;
+                border-right:none ;
+            }
+            &:nth-child(4) {border-left:none ;}
+            &:nth-child(6) {border-right:none ;}
+            &:nth-child(7)
+            {
+                border-radius: 0 0 0 1vw;
+                border-bottom:none ;
+                border-left:none ;
+            }
+            &:nth-child(8) {border-bottom:none ;}
+            &:nth-child(9)
+            {
+                border-radius: 0 0 1vw 0;
+                border-bottom:none ;
+                border-right:none ;
+            }
+        }
+        .actif
+        {
+            background-color: #D67AB1;
+            background-color: #49C6E5;
+            background-color: #242038;
+
+            cursor: pointer;
+        }
+    }
+}
